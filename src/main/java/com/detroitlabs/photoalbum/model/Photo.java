@@ -15,6 +15,7 @@ public class Photo {
         this.name = name;
         this.dateUploaded = dateUploaded;
         tags = new ArrayList<>();
+        this.imageName = imageName;
     }
 
     @Override
