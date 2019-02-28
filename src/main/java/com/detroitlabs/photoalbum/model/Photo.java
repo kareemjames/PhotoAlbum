@@ -8,9 +8,10 @@ public class Photo {
 
     private String name;
     private LocalDate dateUploaded;
+    private String imageName;
     private List<String> tags;
 
-    public Photo(String name, LocalDate dateUploaded) {
+    public Photo(String name, LocalDate dateUploaded, String imageName) {
         this.name = name;
         this.dateUploaded = dateUploaded;
         tags = new ArrayList<>();
@@ -47,5 +48,13 @@ public class Photo {
 
     public void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 }
