@@ -9,13 +9,15 @@ public class Photo {
     private String name;
     private LocalDate dateUploaded;
     private String imageName;
+    private String miniDescription;
     private List<String> tags;
 
-    public Photo(String name, LocalDate dateUploaded, String imageName) {
+    public Photo(String name, LocalDate dateUploaded, String imageName, String miniDescription) {
         this.name = name;
         this.dateUploaded = dateUploaded;
-        tags = new ArrayList<>();
         this.imageName = imageName;
+        this.miniDescription = miniDescription;
+        tags = new ArrayList<>();
     }
 
     @Override
@@ -57,5 +59,13 @@ public class Photo {
 
     public void setImageName(String imageName) {
         this.imageName = imageName;
+    }
+
+    public String getMiniDescription() {
+        return miniDescription;
+    }
+
+    public void setMiniDescription(String miniDescription) {
+        this.miniDescription = miniDescription;
     }
 }
