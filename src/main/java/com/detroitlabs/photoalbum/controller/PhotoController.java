@@ -23,4 +23,6 @@ public class PhotoController {
         modelMap.put("allPhotos", allPhotos);
         return "home";
     }
+
+
 }
