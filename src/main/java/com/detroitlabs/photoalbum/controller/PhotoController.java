@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -41,5 +42,12 @@ public class PhotoController {
         return "home";
     }
 
+    @RequestMapping("/tag/{name}")
+    public String displayAllPhotosSortedByTag(@RequestParam String name, ModelMap modelMap) {
+        List<Photo> allPhotos = photoRepository.getPhotosByTag(name);
+
+        modelMap.put("allPhotos", allPhotos);
+        return "home";
+    }
 
 }

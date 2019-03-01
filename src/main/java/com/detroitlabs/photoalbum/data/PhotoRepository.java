@@ -45,7 +45,15 @@ public class PhotoRepository {
         return sortedPhotosByDate;
     }
 
-    public List<Photo> getPhotosByTag() {
-        return null;
+    public List<Photo> getPhotosByTag(String searchValue) {
+
+        List<Photo> foundPhotosByMatchingTag = new ArrayList<>();
+
+        for (Photo photo : ALL_PHOTOS) {
+            if (photo.getTags().contains(searchValue)) {
+                foundPhotosByMatchingTag.add(photo);
+            }
+        }
+        return foundPhotosByMatchingTag;
     }
 }
