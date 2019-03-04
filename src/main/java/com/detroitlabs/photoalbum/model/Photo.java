@@ -10,14 +10,14 @@ public class Photo {
     private LocalDate dateUploaded;
     private String imageName;
     private String miniDescription;
-    private List<String> tags;
+    private List<String> tags = new ArrayList<>();
 
-    public Photo(String name, LocalDate dateUploaded, String imageName, String miniDescription) {
+    public Photo(String name, LocalDate dateUploaded, String imageName, String miniDescription, List<String> tags) {
         this.name = name;
         this.dateUploaded = dateUploaded;
         this.imageName = imageName;
         this.miniDescription = miniDescription;
-        tags = new ArrayList<>();
+        this.tags = tags;
     }
 
     @Override
